@@ -1,6 +1,6 @@
 # Neon Authorize + Auth0 RLS Example (SQL from the Backend)
 
-This repository is a guided getting started example for Neon Authorize + Auth0 RLS.
+This repository is a guided getting started example for Neon Authorize + Auth0.
 
 1. Create a Neon project
 2. Create a Auth0 application
