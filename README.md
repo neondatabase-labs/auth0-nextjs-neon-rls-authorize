@@ -1,4 +1,4 @@
-# Neon Authorize + Auth0 RLS Example (SQL from the Backend)
+# Neon Authorize + Auth0 Example (SQL from the Backend)
 
 This repository is a guided getting started example for Neon Authorize + Auth0.
 
