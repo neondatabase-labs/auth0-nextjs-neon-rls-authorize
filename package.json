@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint": "next lint",
     "drizzle:generate": "drizzle-kit generate",
-    "drizzle:migrate": "bun migrate.ts"
+    "drizzle:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
