@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",
-    "@neondatabase/serverless": "github:neondatabase/serverless#release-jwt-token",
+    "@neondatabase/serverless": "^0.10.1",
     "@types/node": "^20.11.0",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
