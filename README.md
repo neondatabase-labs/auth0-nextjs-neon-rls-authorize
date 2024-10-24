@@ -7,8 +7,9 @@ This repository is a guided getting started example for Neon Authorize + Auth0.
 3. Set up the `Allowed Callback URLs` and `Allowed Logout URLs` to `http://localhost:3030/api/auth/callback` and `http://localhost:3030` respectively in the Auth0 dashboard
 4. Go to the Neon Console, and click "Authorize" to access the Neon Authorize configuration UI
 5. Add a new authentication provider, and use `https://{yourDomain}/.well-known/jwks.json` as the JWKS URL (replace `yourDomain` with your Auth0's app domain)
-6. Clone this repository and run `npm install` or `bun install`
-7. Create a `.env` file in the root of this project and add the following:
+6. Follow the steps in the UI to setup the roles for Neon Authorize. You should ignore the schema related steps if you're following this guide
+7. Clone this repository and run `npm install` or `bun install`
+8. Create a `.env` file in the root of this project and add the following:
 
 ```
 # For the `neondb_owner` role.
@@ -25,7 +26,7 @@ AUTH0_SCOPE=openid profile read:shows
 AUTH0_AUDIENCE={YOUR_AUTH0_API_IDENTIFIER}
 ```
 
-8. Run `npm run drizzle:migrate` or `bun run drizzle:migrate` to apply the migrations
-9. Run `npm run dev` or `bun run dev`
-10. Open your browser and go to `http://localhost:3000`
-11. Login and play around!
+9. Run `npm run drizzle:migrate` or `bun run drizzle:migrate` to apply the migrations
+10. Run `npm run dev` or `bun run dev`
+11. Open your browser and go to `http://localhost:3000`
+12. Login and play around!
