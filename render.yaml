@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: neon-authorize-auth0
+    runtime: node
+    plan: free
+    # Set NODE_ENV=development for build command since Render needs devDependencies to build Next.js (https://community.render.com/t/nextjs-deployment-fails-unless-devdependencies-moved-to-dependencies-in-package-json/26748)
+    buildCommand: NODE_ENV=development npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: DATABASE_URL
+        sync: false # Securely configure the database URL in Render Dashboard
+
+      - key: DATABASE_AUTHENTICATED_URL
+        sync: false # Securely configure the authenticated database URL in Render Dashboard
+
+      - key: AUTH0_SECRET
+        sync: false # Securely configure Auth0 secret in Render Dashboard
+
+      - key: AUTH0_ISSUER_BASE_URL
+        sync: false # Configure Auth0 issuer base URL in Render Dashboard
+
+      - key: AUTH0_BASE_URL
+        sync: false # Configure Auth0 base URL in Render Dashboard
+
+      - key: AUTH0_CLIENT_ID
+        sync: false # Securely configure Auth0 client ID in Render Dashboard
+
+      - key: AUTH0_CLIENT_SECRET
+        sync: false # Securely configure Auth0 client secret in Render Dashboard
+
+      - key: AUTH0_SCOPE
+        sync: false # Configure Auth0 scopes in Render Dashboard
+
+      - key: AUTH0_AUDIENCE
+        sync: false # Configure Auth0 API identifier in Render Dashboard

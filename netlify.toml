@@ -1,0 +1,27 @@
+[build.environment]
+  NEXT_TELEMETRY_DISABLED = "1"
+  NODE_VERSION = "20"
+
+# Production context
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Development context (deploys from git branches)
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }
+
+# Preview context (deploy previews from pull/merge requests)
+[context.deploy-preview]
+  environment = { NODE_ENV = "development" }
+
+# Environment variables
+[template.environment]
+  DATABASE_URL = "Required: NeonDB owner role connection string"
+  DATABASE_AUTHENTICATED_URL = "Required: NeonDB authenticated role connection string"
+  AUTH0_SECRET = "Required: Auth0 secret (at least 32 characters)"
+  AUTH0_ISSUER_BASE_URL = "Required: Auth0 issuer base URL"
+  AUTH0_BASE_URL = "Required: Auth0 base URL (your application's URL)"
+  AUTH0_CLIENT_ID = "Required: Auth0 client ID"
+  AUTH0_CLIENT_SECRET = "Required: Auth0 client secret"
+  AUTH0_SCOPE = "Required: Auth0 scope"
+  AUTH0_AUDIENCE = "Required: Auth0 audience"
