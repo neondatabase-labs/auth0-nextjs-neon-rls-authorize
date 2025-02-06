@@ -1,14 +1,14 @@
 <img width="250px" src="https://neon.tech/brand/neon-logo-dark-color.svg" />
 
-# Neon Authorize + Auth0 Example (SQL from the Backend)
+# Neon RLS Authorize + Auth0 Example (SQL from the Backend)
 
-A quick start Next.js template demonstrating secure user authentication and authorization using Neon Authorize with Auth0 integration. This guide primarily uses SQL from the backend to enforce row-level security policies.
+A quick start Next.js template demonstrating secure user authentication and authorization using Neon RLS Authorize with Auth0 integration. This guide primarily uses SQL from the backend to enforce row-level security policies.
 
 ## Features
 
 - Next.js application with TypeScript
 - User authentication powered by Auth0
-- Row-level security using Neon Authorize
+- Row-level security using Neon RLS Authorize
 - Database migrations with Drizzle ORM
 - Ready-to-deploy configuration for Vercel, Netlify, and Render
 
@@ -22,9 +22,9 @@ A quick start Next.js template demonstrating secure user authentication and auth
 
 Deploy directly to your preferred hosting platform:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/neondatabase-labs/auth0-nextjs-neon-authorize&env=DATABASE_URL,DATABASE_AUTHENTICATED_URL,AUTH0_SECRET,AUTH0_ISSUER_BASE_URL,AUTH0_BASE_URL,AUTH0_CLIENT_ID,AUTH0_CLIENT_SECRET,AUTH0_SCOPE,AUTH0_AUDIENCE&project-name=neon-authorize-auth0&repository-name=neon-authorize-auth0)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/neondatabase-labs/auth0-nextjs-neon-authorize)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/neondatabase-labs/auth0-nextjs-neon-authorize)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/neondatabase-labs/auth0-nextjs-neon-rls-authorize&env=DATABASE_URL,DATABASE_AUTHENTICATED_URL,AUTH0_SECRET,AUTH0_ISSUER_BASE_URL,AUTH0_BASE_URL,AUTH0_CLIENT_ID,AUTH0_CLIENT_SECRET,AUTH0_SCOPE,AUTH0_AUDIENCE&project-name=neon-rls-authorize-auth0&repository-name=neon-rls-authorize-auth0)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/neondatabase-labs/auth0-nextjs-neon-rls-authorize)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/neondatabase-labs/auth0-nextjs-neon-rls-authorize)
 
 > **Important**: After deployment, set `AUTH0_BASE_URL` to your deployment URL and ensure the "Callback URLs" and "Logout URLs" in your Auth0 application settings are correctly configured for your deployment URL.
 
@@ -39,22 +39,22 @@ Deploy directly to your preferred hosting platform:
 
 ![Auth0 Application Settings](/images/auth0-application-settings.png)
 
-### 2. Set Up Neon Authorize
+### 2. Set Up Neon RLS Authorize
 
-1. Open your Neon Console and click "Authorize"
+1. Open your Neon Console and click "RLS Authorize" in your project's settings
 2. Add a new authentication provider
 3. Set the JWKS URL to: `https://{YOUR_AUTH0_DOMAIN}/.well-known/jwks.json`
    > Replace `{YOUR_AUTH0_DOMAIN}` with your Auth0 domain.
 
-![Neon Authorize Add Auth Provider](/images/neon-authorize-add-auth-provider.png)
+![Neon RLS Authorize Add Auth Provider](/images/neon-authorize-add-auth-provider.png)
 
 ### 3. Local Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/neondatabase-labs/auth0-nextjs-neon-authorize
-   cd auth0-nextjs-neon-authorize
+   git clone https://github.com/neondatabase-labs/auth0-nextjs-neon-rls-authorize
+   cd auth0-nextjs-neon-rls-authorize
    ```
 
 2. Install dependencies:
@@ -97,14 +97,14 @@ Deploy directly to your preferred hosting platform:
 
 6. Visit `http://localhost:3000` to see the application running
 
-![Neon Authorize + Auth0 Example](/images/neon-authorize-auth0-example.png)
+![Neon RLS Authorize + Auth0 Example](/images/neon-authorize-auth0-example.png)
 
 ## Learn More
 
-- [Neon Authorize Tutorial](https://neon.tech/docs/guides/neon-authorize-tutorial)
+- [Neon RLS Authorize Tutorial](https://neon.tech/docs/guides/neon-authorize-tutorial)
 - [Simplify RLS with Drizzle](https://neon.tech/docs/guides/neon-authorize-drizzle)
 - [Auth0 Docs](https://auth0.com/docs)
-- [Auth0 + Neon Authorize](https://neon.tech/docs/guides/neon-authorize-auth0)
+- [Auth0 + Neon RLS Authorize](https://neon.tech/docs/guides/neon-authorize-auth0)
 
 ## Authors
 
